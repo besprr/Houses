@@ -1,95 +1,18 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+/* Error: Undefined operation "var(--container-padding-x) * 2".
+ *   ,
+ * 2 |   max-width: calc(var(--container-width)) + var(--container-padding-x) * 2;
+ *   |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   _utils.scss 2:45  @import
+ *   styles.scss 7:1   root stylesheet */
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined operation "var(--container-padding-x) * 2".\a   \2577 \a 2 \2502    max-width: calc(var(--container-width)) + var(--container-padding-x) * 2;\d\a   \2502                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   _utils.scss 2:45  @import\a   styles.scss 7:1   root stylesheet';
 }
-
-body {
-  line-height: 1;
-  overflow: hidden;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/gilroy.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica-Regular";
-  src: url("../fonts/Helvetica-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Involve";
-  src: url("../fonts/involve.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-:root {
-  --color-light: #FBFDFD;
-  --color-white-dark: #dbdbdb;
-  --color-gray: #848484;
-  --color-orange-light: #F39779;
-  --color-orange: #E97550;
-  --color-orange-dark: #E05D33;
-  --color-emerald-light: #1A4A4B;
-  --color-emerald: #114142;
-  --color-emerald-dark: #063536;
-  --container-width: 1354px;
-  --container-padding-x: 20px;
-  --container-padding-y: 70px;
-  --buttong-height: 52px;
-  --transition-duration: 0.2s;
-}
-
-/*# sourceMappingURL=styles.css.map */
