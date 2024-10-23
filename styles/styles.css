@@ -1,18 +1,179 @@
-/* Error: Undefined operation "var(--container-padding-x) * 2".
- *   ,
- * 2 |   max-width: calc(var(--container-width)) + var(--container-padding-x) * 2;
- *   |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   _utils.scss 2:45  @import
- *   styles.scss 7:1   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Undefined operation "var(--container-padding-x) * 2".\a   \2577 \a 2 \2502    max-width: calc(var(--container-width)) + var(--container-padding-x) * 2;\d\a   \2502                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   _utils.scss 2:45  @import\a   styles.scss 7:1   root stylesheet';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica-Regular";
+  src: url("../fonts/Helvetica-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src: url("../fonts/involve.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-light: #FBFDFD;
+  --color-white-dark: #dbdbdb;
+  --color-gray: #848484;
+  --color-orange-light: #F39779;
+  --color-orange: #E97550;
+  --color-orange-dark: #E05D33;
+  --color-emerald-light: #1A4A4B;
+  --color-emerald: #114142;
+  --color-emerald-dark: #063536;
+  --container-width: 1354px;
+  --container-padding-x: 20px;
+  --container-padding-y: 70px;
+  --buttong-height: 52px;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 320px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: clamp(16px, 0.9375vw, 18px);
+  color: var(--color-light);
+  background-image: url("../img/main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: clamp(34px, 3.3333333333vw, 64px);
+}
+
+h2 {
+  font-size: clamp(24px, 2.5vw, 48px);
+}
+
+h3 {
+  font-size: clamp(22px, 2.0833333333vw, 40px);
+}
+
+h4 {
+  font-size: clamp(20px, 1.6666666667vw, 32px);
+}
+
+h5 {
+  font-size: clamp(18px, 1.1458333333vw, 22px);
+}
+
+h6 {
+  font-size: clamp(16px, 0.9375vw, 18px);
+}
+
+h1, h3, h6 {
+  font-weight: 400;
+}
+
+h2, h4, h5 {
+  font-weight: 800;
+}
+
+/*# sourceMappingURL=styles.css.map */
